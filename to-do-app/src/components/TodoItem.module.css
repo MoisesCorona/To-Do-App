@@ -1,0 +1,49 @@
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.text {
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.category {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.toggleButton {
+  padding: 0.4rem 0.8rem;
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.toggleButton:hover {
+  background-color: #218838;
+}
+

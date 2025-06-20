@@ -1,0 +1,123 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  color: #121212;
+  margin: 0;
+  padding: 2rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+/* Container */
+.app-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 5rem;
+  border-radius: 10px;
+  padding-left: 20rem;
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Dark mode toggle + filter row */
+.top-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Form layout */
+.todo-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.todo-form input,
+.todo-form select {
+  flex: 1;
+  min-width: 150px;
+}
+
+/* Add button */
+.todo-form button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: royalblue;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.todo-form button:hover {
+  background-color: darkblue;
+}
+
+/* Todo list */
+.todo-item {
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+body.dark .todo-item {
+  background-color: #2a2a2a;
+}
+
+/* Buttons inside todo items */
+.todo-item button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 6px;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+body.dark .todo-item button {
+  background-color: #eee;
+  color: #121212;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filter-group label {
+  font-weight: 500;
+}
+
+.filter-group select {
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: white;
+  font-size: 1rem;
+}
+
+body.dark .filter-group select {
+  background-color: #2e2e2e;
+  color: white;
+  border: 1px solid #555;
+}
