@@ -99,7 +99,7 @@ function App() {
     </div>
   </div>
 
-  <h1>📋 To-Do App with Categories</h1>
+  <h1>📋 To-Do App </h1>
 
   <div className="todo-form">
     <TodoForm addTodo={addTodo} />

@@ -1,123 +1,127 @@
+/* Container padding and responsiveness */
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fff;
-  color: #121212;
   margin: 0;
-  padding: 2rem;
+  font-family: system-ui, sans-serif;
+  background-color: white;
+  color: #111;
+  padding: 1rem;
   transition: background-color 0.3s, color 0.3s;
 }
 
 body.dark {
   background-color: #121212;
-  color: #f5f5f5;
+  color: #eee;
 }
 
-/* Container */
+/* Main App container */
 .app-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 5rem;
-  border-radius: 10px;
-  padding-left: 20rem;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
-/* Header */
-h1 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-}
-
-/* Dark mode toggle + filter row */
+/* Top controls row */
 .top-controls {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 2rem;
-  flex-wrap: wrap;
-  gap: 1rem;
 }
 
-/* Form layout */
-.todo-form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.todo-form input,
-.todo-form select {
-  flex: 1;
-  min-width: 150px;
-}
-
-/* Add button */
-.todo-form button {
-  padding: 0.5rem 1rem;
-  border: none;
-  background-color: royalblue;
-  color: white;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.todo-form button:hover {
-  background-color: darkblue;
-}
-
-/* Todo list */
-.todo-item {
-  background-color: #f4f4f4;
-  border-radius: 8px;
-  padding: 1rem;
-  margin-bottom: 0.75rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: background-color 0.3s;
-}
-
-body.dark .todo-item {
-  background-color: #2a2a2a;
-}
-
-/* Buttons inside todo items */
-.todo-item button {
-  background-color: #333;
-  color: white;
-  border: none;
-  padding: 0.5rem;
-  border-radius: 6px;
-  margin-left: 0.5rem;
-  cursor: pointer;
-}
-
-body.dark .todo-item button {
-  background-color: #eee;
-  color: #121212;
-}
-
+/* Filter group */
 .filter-group {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.filter-group label {
-  font-weight: 500;
-}
-
-.filter-group select {
-  padding: 0.4rem 0.6rem;
+/* Inputs and Selects */
+input, select {
+  padding: 0.5rem;
   border-radius: 6px;
   border: 1px solid #ccc;
-  background-color: white;
+  font-size: 1rem;
+  flex: 1;
+  min-width: 120px;
+}
+
+body.dark input,
+body.dark select {
+  background-color: #2a2a2a;
+  color: #eee;
+  border: 1px solid #444;
+}
+
+/* To-Do List */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f2f2f2;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  border-radius: 8px;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+body.dark li {
+  background: #2c2c2c;
+}
+
+/* Todo text area */
+.todo-text {
+  flex-grow: 1;
+}
+
+/* Button Styles */
+button {
+  padding: 0.2rem 0.8rem;
+  margin-left: .2rem;
+  border: none;
+  align-items: center;
+  border-radius: 6px;
+  cursor: pointer;
   font-size: 1rem;
 }
 
-body.dark .filter-group select {
-  background-color: #2e2e2e;
+button.edit,
+button.delete {
+  background-color: #444;
   color: white;
-  border: 1px solid #555;
+}
+
+body.dark button.edit,
+body.dark button.delete {
+  background-color: #ddd;
+  color: #111;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .top-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filter-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  button {
+    width: 100%;
+  }
 }
